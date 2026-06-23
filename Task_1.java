@@ -2,8 +2,8 @@ import java.util.Scanner;
 public class Task_1
 {
     public static void main(String[] args)
-{
-    Scanner sc = new Scanner(System.in);
+    {
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("===== Temperature Converter =====");
         System.out.println("1. Celsius to Fahrenheit");
@@ -13,25 +13,30 @@ public class Task_1
         int choice = sc.nextInt();
 
         System.out.print("Enter temperature: ");
-        double temp = sc.nextDouble();
+        double temperature = sc.nextDouble();
 
-        if (choice == 1) {
+        double convertedTemp;
 
-            double fahrenheit = (temp * 9 / 5) + 32;
-            System.out.println("Converted Temperature = "
-                    + fahrenheit + " °F");
-
-        } else if (choice == 2) {
-
-            double celsius = (temp - 32) * 5 / 9;
-            System.out.println("Converted Temperature = "
-                    + celsius + " °C");
-
-        } else {
-
-            System.out.println("Invalid Choice!");
+        // Choice 1: Celsius -> Fahrenhiet
+        if (choice == 1)
+        {
+            convertedTemp = (temperature * 9 / 5) + 32;
+            System.out.println("\nConversion Result:");
+            System.out.println(temperature + " °C = " + convertedTemp + " °F ");
         }
-
+        // Choice 2: Fahrenhiet -> Celsius
+        else if (choice == 2)
+        {
+            convertedTemp = (temperature - 32) * 5 / 9;
+            System.out.println("\nConversion Result:");
+            System.out.println(temperature + " °F = " + convertedTemp + " °C");
+        }
+        // Invalid menu choice
+        else
+        {
+            System.out.println("Invalid Choice! Please enter 1 or 2.");
+        }
+        System.out.println("\nThank you for using Temperature Converter.");
         sc.close();
     }
 }
