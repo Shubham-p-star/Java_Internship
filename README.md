@@ -11,7 +11,7 @@ This repository contains Java projects completed during my internship.
 ### Task 2 - Palindrome Checker
 - Checks whether a word or phrase is a palindrome
   
-Task 3 - Student Grade Calculator
+### Task 3 - Student Grade Calculator
 - Takes multiple grades as input
 - Stores grades using arrays
 - Calculates total marks
